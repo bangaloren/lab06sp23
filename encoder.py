@@ -19,7 +19,7 @@ def encode(phrase):
 
 
 def decode(phrase):
-    print("The encoded password is"+encode(phrase)+" , and the original password is "+phrase+".")
+    print("The encoded password is" + encode(phrase) + " , and the original password is " + phrase + ".")
 
 
 
