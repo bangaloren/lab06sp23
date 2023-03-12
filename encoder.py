@@ -1,12 +1,13 @@
 # Neha Bangalore
 def encode(phrase):
-    result=" "
+    global result
+    result = " "
     for i in phrase:
             i=int(i)+3
             if i>9:
                 i-=10
             result+=str(i)
-    print(result)
+    return result
 
 
 
@@ -15,32 +16,32 @@ def encode(phrase):
 
 
 
-#def decode(phrase):
-    #num_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2]
-    #result = ''
-    #for i in phrase:
-        #i = num_list[i - 3]
+
+
+def decode(phrase):
+    print("The encoded password is"+encode(phrase)+" , and the original password is "+phrase+".")
 
 
 
 def main():
     # looping menu
-    option = '1'
+    coder = True
     phrase = ''
-    while option != '0':
+    while coder == True:
+
         # print menu
-        print('0. Exit')
-        print('1. Enter a new phrase')
-        print('2. Print encoded phrase')
-        print('3. Print decoded phrase')
+        print('1. Encode')
+        print('2. Decode')
+        print('3. Quit')
         option = input('Enter an option: ')
 
         if option == '1':
             phrase = input('Enter your phrase: ')
+            print('Your password has been encoded and stored!')
         elif option == '2':
-            print('Encoded phrase is', encode(phrase))
+            decode(phrase)
         elif option == '3':
-            print('Decoded phrase is', decode(phrase))
+            break
 
 
 if __name__ == "__main__":
