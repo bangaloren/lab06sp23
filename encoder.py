@@ -19,7 +19,15 @@ def encode(phrase):
 
 
 def decode(phrase):
-    print("The encoded password is" + encode(phrase) + " , and the original password is " + phrase + ".")
+    result = ''
+    for i in phrase:
+        i = int(i) - 3
+        if i <0:
+            i+=10
+        i = str(i)
+        result += f"{i}"
+    return result
+    # print("The encoded password is" + encode(phrase) + " , and the original password is " + phrase + ".")
 
 
 
